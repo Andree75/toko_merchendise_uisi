@@ -101,6 +101,9 @@ class _HalamanBarangState extends State<HalamanBarang> {
             child: ListTile(
               title: Text(listBarang[index].nama),
               subtitle: Text(listBarang[index].deskripsi),
+              subtitle: Text(listBarang[index].kategori),
+              trailing: Text("Rp ${listBarang[index].harga}"),
+
             ),
           );
         }

@@ -23,6 +23,7 @@ class BarangController {
     double harga,
     int stok,
     String deskripsi,
+    String kategori,
     String imagePath
   ) async{
     List<int> imageBytes = File(imagePath).readAsBytesSync();
@@ -35,6 +36,7 @@ class BarangController {
         "harga": harga.toString(),
         "stok": stok.toString(),
         "deskripsi": deskripsi,
+        "kategori": kategori,
         "image": base64Image
       }
       

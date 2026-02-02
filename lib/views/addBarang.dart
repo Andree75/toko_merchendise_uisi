@@ -16,6 +16,7 @@ class _HalamanTambahBarangState extends State<HalamanTambahBarang> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController namaBarangController = TextEditingController();
   final TextEditingController deskripsiController = TextEditingController();
+  final TextEditingController kategoriController = TextEditingController();
 
   int stok = 1;
   double harga = 10000.0;
@@ -134,6 +135,17 @@ class _HalamanTambahBarangState extends State<HalamanTambahBarang> {
                       ),
                     ),
                     SizedBox(height: 20,),
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: TextFormField(
+                        controller: kategoriController,
+                        maxLines: 5,
+                        decoration: InputDecoration(
+                          label: Text("Kategori Barang"),
+                          border: OutlineInputBorder()
+                        ),
+                      ),
+                    ),
                     ElevatedButton(
                       onPressed: (){
                         if (_formKey.currentState!.validate() == true) {
